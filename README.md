@@ -6,7 +6,7 @@ This is a test of the open weather maps API using Go
 Running this awesome repo is _**super easy.**_ Just clone the repo into your `go/src` folder, cd into the 
 `open-weather-maps-test` folder, and run the command 
 
-    `go run main.go`
+    go run main.go
 
 Then enter your coordinates into the console. 
 
