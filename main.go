@@ -106,6 +106,10 @@ func main() {
 		log.Fatal(err)
 	}
 
+	if longitude > 180 || longitude < -180 || latitude > 90 || latitude < -90 {
+		log.Fatal("Invalid longitude (-180 <= x <= 180) or latitude (-90 <= x <= 90)")
+	}
+
 	response, err := http.Get("https://api.openweathermap.org/data/2.5/weather?lat=" + fmt.Sprintf("%f", latitude) + "&lon=" + fmt.Sprintf("%f", longitude) + "&units=imperial&appid=67bef9f0f5d501c8d4404d04d1d2ba2f")
 
 	if err != nil {
